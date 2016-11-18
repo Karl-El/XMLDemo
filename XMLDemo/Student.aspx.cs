@@ -22,10 +22,44 @@ namespace XMLDemo
             if (File.Exists(FileName) == true)
             {
                 XmlDocument XDoc = new XmlDocument();
+                XDoc.Load(Server.MapPath("StudentData.xml"));
+                XmlElement student = XDoc.CreateElement("student");
 
+                XmlElement id = XDoc.CreateElement("id");
+                XmlText xmlid = XDoc.CreateTextNode(_txtID.Text.Trim());
+                XmlElement firstname = XDoc.CreateElement("firstname");
+                XmlText xmlfirstname = XDoc.CreateTextNode(_txtFirstName.Text.Trim());
+                XmlElement lastname = XDoc.CreateElement("lastname");
+                XmlText xmllastname = XDoc.CreateTextNode(_txtLastName.Text.Trim());
+                XmlElement city = XDoc.CreateElement("city");
+                XmlText xmlcity = XDoc.CreateTextNode(_drpdwnlstCity.SelectedItem.Text);
+                XmlElement gender = XDoc.CreateElement("gender");
+                XmlText xmlgender = XDoc.CreateTextNode(_rdbtnlstGender.SelectedItem.Text);
+                XmlElement postalcode = XDoc.CreateElement("postalcode");
+                XmlText xmlpostalcode = XDoc.CreateTextNode(_txtPostalCode.Text.Trim());
+                XmlElement mobileno = XDoc.CreateElement("mobileno");
+                XmlText xmlmobileno = XDoc.CreateTextNode(_txtMobileNo.Text.Trim());
+
+                id.AppendChild(xmlid);
+                firstname.AppendChild(xmlfirstname);
+                lastname.AppendChild(xmllastname);
+                city.AppendChild(xmlcity);
+                gender.AppendChild(xmlgender);
+                postalcode.AppendChild(xmlpostalcode);
+                mobileno.AppendChild(xmlmobileno);
+
+                student.AppendChild(id);
+                student.AppendChild(firstname);
+                student.AppendChild(lastname);
+                student.AppendChild(city);
+                student.AppendChild(gender);
+                student.AppendChild(postalcode);
+                student.AppendChild(mobileno);
+
+                XDoc.DocumentElement.AppendChild(student);
+                XDoc.Save(Server.MapPath("StudentData.xml"));
             }
             else
-            //11.18.16.11.36.AM //XMLDemo
             {
                 XmlTextWriter XTW = new XmlTextWriter(FileName, null);
 
