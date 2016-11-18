@@ -13,18 +13,27 @@
     <id>2</id>
     <firstname>Blitz</firstname>
     <lastname>Crank</lastname>
-    <city>Caloocan</city>
+    <city>Quezon City</city>
     <gender>Male</gender>
     <postalcode>1106</postalcode>
     <mobileno>123-554-4444</mobileno>
   </student>
   <student>
     <id>3</id>
-    <firstname>Garen</firstname>
+    <firstname>Lux</firstname>
     <lastname>Crownguard</lastname>
+    <city>Quezon City</city>
+    <gender>Female</gender>
+    <postalcode>1106</postalcode>
+    <mobileno>09154422555</mobileno>
+  </student>
+  <student>
+    <id>4</id>
+    <firstname>Sona</firstname>
+    <lastname>Duvelle</lastname>
     <city>Caloocan</city>
-    <gender>Male</gender>
-    <postalcode>2155</postalcode>
-    <mobileno>22355-22</mobileno>
+    <gender>Female</gender>
+    <postalcode>1106</postalcode>
+    <mobileno>09154422555</mobileno>
   </student>
 </students>

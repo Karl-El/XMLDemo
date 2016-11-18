@@ -60,7 +60,7 @@ namespace XMLDemo
                 student.AppendChild(mobileno);
 
                 XDoc.DocumentElement.AppendChild(student);
-                XDoc.Save(Server.MapPath("StudentData.xml"));
+                XDoc.Save(Server.MapPath("StudentData.xml")); Response.Redirect(Request.Url.PathAndQuery, true);
             }
             else
             {
@@ -109,7 +109,55 @@ namespace XMLDemo
 
         protected void _grdvwStudent_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            Label _lblID = (Label)_grdvwStudent.Rows[e.RowIndex].FindControl("_lblID");
+            TextBox _txtFirstName = (TextBox)_grdvwStudent.Rows[e.RowIndex].FindControl("_txtFirstName");
+            TextBox _txtLastName = (TextBox)_grdvwStudent.Rows[e.RowIndex].FindControl("_txtLastName");
+            DropDownList _drpdwnlstCity = (DropDownList)_grdvwStudent.Rows[e.RowIndex].FindControl("_drpdwnlstCity");
+            RadioButtonList _rdbtnlstGender = (RadioButtonList)_grdvwStudent.Rows[e.RowIndex].FindControl("_rdbtnlstGender");
+            TextBox _txtPostCode = (TextBox)_grdvwStudent.Rows[e.RowIndex].FindControl("_txtPostCode");
+            TextBox _txtMobileNo = (TextBox)_grdvwStudent.Rows[e.RowIndex].FindControl("_txtMobileNo");
 
+            XmlDocument XDoc = new XmlDocument();
+            XDoc.Load(Server.MapPath("StudentData.xml"));
+
+            XmlNodeList NodeList = XDoc.SelectNodes("/students/student");
+
+            foreach (XmlNode item in NodeList)
+            {
+                if (item.ChildNodes[0].InnerText == _lblID.Text)
+                {
+                    item.ChildNodes[1].InnerText = _txtFirstName.Text.Trim();
+                    item.ChildNodes[2].InnerText = _txtLastName.Text.Trim();
+                    item.ChildNodes[3].InnerText = _drpdwnlstCity.SelectedItem.Text;
+                    item.ChildNodes[4].InnerText = _rdbtnlstGender.SelectedItem.Text;
+                    item.ChildNodes[5].InnerText = _txtPostCode.Text.Trim();
+                    item.ChildNodes[6].InnerText = _txtMobileNo.Text.Trim();
+                }
+            }
+
+            XDoc.Save(Server.MapPath("StudentData.xml"));
+            _grdvwStudent.EditIndex = -1;
+            BindGridStudent();
+        }
+
+        protected void _grdvwStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            Label _lblID = (Label)_grdvwStudent.Rows[e.RowIndex].FindControl("_lblID");
+            XmlDocument XDoc = new XmlDocument();
+            XDoc.Load(Server.MapPath("StudentData.xml"));
+
+            XmlNodeList NodeList = XDoc.SelectNodes("/students/student");
+
+            foreach (XmlNode item in NodeList)
+            {
+                if (item.ChildNodes[0].InnerText == _lblID.Text)
+                {
+                    item.ParentNode.RemoveChild(item);
+                }
+            }
+
+            XDoc.Save(Server.MapPath("StudentData.xml"));
+            BindGridStudent();
         }
     }
 }
