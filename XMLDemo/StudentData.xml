@@ -27,13 +27,4 @@
     <postalcode>1106</postalcode>
     <mobileno>09154422555</mobileno>
   </student>
-  <student>
-    <id>4</id>
-    <firstname>Sona</firstname>
-    <lastname>Duvelle</lastname>
-    <city>Caloocan</city>
-    <gender>Female</gender>
-    <postalcode>1106</postalcode>
-    <mobileno>09154422555</mobileno>
-  </student>
 </students>
