@@ -1,1 +1,30 @@
-<?xml version="1.0"?><students><student><id>1</id><firstname>Carl</firstname><lastname>Cruz</lastname><city>Quezon City</city><gender>Male</gender><postalcode>1106</postalcode><mobileno>09169118616</mobileno></student></students>
+<?xml version="1.0"?>
+<students>
+  <student>
+    <id>1</id>
+    <firstname>Carl</firstname>
+    <lastname>Cruz</lastname>
+    <city>Quezon City</city>
+    <gender>Male</gender>
+    <postalcode>1106</postalcode>
+    <mobileno>09169118616</mobileno>
+  </student>
+  <student>
+    <id>2</id>
+    <firstname>Blitz</firstname>
+    <lastname>Crank</lastname>
+    <city>Caloocan</city>
+    <gender>Male</gender>
+    <postalcode>1106</postalcode>
+    <mobileno>123-554-4444</mobileno>
+  </student>
+  <student>
+    <id>3</id>
+    <firstname>Garen</firstname>
+    <lastname>Crownguard</lastname>
+    <city>Caloocan</city>
+    <gender>Male</gender>
+    <postalcode>2155</postalcode>
+    <mobileno>22355-22</mobileno>
+  </student>
+</students>

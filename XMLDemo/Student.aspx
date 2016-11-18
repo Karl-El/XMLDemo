@@ -5,85 +5,78 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <%--<link href="Content/site.css" rel="stylesheet" type="text/css" />--%>
+    <link href="Content/checkbox.css" rel="stylesheet" type="text/css" />
+    <link href="Content/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-            <fieldset style="width: 400px">
-                <legend>XML Database Demo</legend>
-                <table border="1">
+        <div>
+            <div class="well">
+                <h3>XML Database Demo</h3>
+                <table class="table table-responsive">
                     <tr>
                         <th>Roll No:</th>
                         <td>
-                            <asp:TextBox runat="server" ID="_txtID" />
+                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtID" />
                         </td>
                     </tr>
                     <tr>
                         <th>First Name:</th>
                         <td>
-                            <asp:TextBox runat="server" ID="_txtFirstName" />
+                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtFirstName" />
                         </td>
                     </tr>
                     <tr>
                         <th>Last Name:</th>
                         <td>
-                            <asp:TextBox runat="server" ID="_txtLastName" />
+                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtLastName" />
                         </td>
                     </tr>
                     <tr>
                         <th>City:</th>
                         <td>
-                            <asp:DropDownList runat="server" ID="_drpdwnlstCity">
+                            <asp:DropDownList runat="server" CssClass="form-control" ID="_drpdwnlstCity">
                                 <asp:ListItem>Quezon City</asp:ListItem>
                                 <asp:ListItem>Manila</asp:ListItem>
                                 <asp:ListItem>Caloocan</asp:ListItem>
-                                <asp:ListItem></asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
                         <th>Gender:</th>
                         <td>
-                            <asp:RadioButtonList runat="server" ID="_rdbtnlstGender" RepeatDirection="Horizontal">
+                            <asp:RadioButtonList runat="server" CssClass="radio radio-info" ID="_rdbtnlstGender" >
                                 <asp:ListItem>Male</asp:ListItem>
                                 <asp:ListItem>Female</asp:ListItem>
-
                             </asp:RadioButtonList>
                         </td>
                     </tr>
                     <tr>
                         <th>Postal code:</th>
                         <td>
-                            <asp:TextBox runat="server" ID="_txtPostalCode" />
+                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtPostalCode" />
                         </td>
                     </tr>
                     <tr>
                         <th>Mobile No:</th>
                         <td>
-                            <asp:TextBox runat="server" ID="_txtMobileNo" />
+                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtMobileNo"/>
                         </td>
                     </tr>
                     <tr>
-                        <th>
-                            <asp:Button runat="server" Text="Insert" ID="_btnInsert" OnClick="_btnInsert_Click"/>
-                        </th>
+                        <td colspan="2">
+                            <asp:Button runat="server" CssClass="btn btn-default" Text="Insert" ID="_btnInsert" OnClick="_btnInsert_Click" />
+                        </td>
                     </tr>
                 </table>
                 <br />
-                <asp:GridView runat="server" ID="_grdvwStudent" CellPadding="4" ForeColor="#333333" GridLines="None">
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                <asp:GridView runat="server" ID="_grdvwStudent" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="table table-hover table-responsive">
                 </asp:GridView>
-            </fieldset>
+            </div>
         </div>
     </form>
 </body>

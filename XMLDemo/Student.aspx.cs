@@ -13,7 +13,10 @@ namespace XMLDemo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                BindGridStudent();
+            }
         }
 
         protected void _btnInsert_Click(object sender, EventArgs e)
@@ -81,6 +84,15 @@ namespace XMLDemo
                 XTW.Close();
             }
 
+        }
+
+        public void BindGridStudent()
+        {
+            System.Data.DataSet DS = new System.Data.DataSet();
+            DS.ReadXml(Server.MapPath("StudentData.xml"));
+
+            _grdvwStudent.DataSource = DS;
+            _grdvwStudent.DataBind();
         }
     }
 }
