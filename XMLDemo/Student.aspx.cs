@@ -94,5 +94,22 @@ namespace XMLDemo
             _grdvwStudent.DataSource = DS;
             _grdvwStudent.DataBind();
         }
+
+        protected void _grdvwStudent_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            _grdvwStudent.EditIndex = e.NewEditIndex;
+            BindGridStudent();
+        }
+
+        protected void _grdvwStudent_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            _grdvwStudent.EditIndex = -1;
+            BindGridStudent();
+        }
+
+        protected void _grdvwStudent_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
     }
 }
