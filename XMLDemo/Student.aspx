@@ -100,9 +100,22 @@
                         <asp:TemplateField HeaderText="City">
                             <EditItemTemplate>
                                 <asp:DropDownList ID="_drpdwnlstCity" runat="server" CssClass="form-control" SelectedValue='<%# Bind("city") %>'>
-                                    <asp:ListItem>Quezon City</asp:ListItem>
-                                    <asp:ListItem>Manila</asp:ListItem>
                                     <asp:ListItem>Caloocan</asp:ListItem>
+                                    <asp:ListItem>Las Piñas</asp:ListItem>
+                                    <asp:ListItem>Makati</asp:ListItem>
+                                    <asp:ListItem>Malabon</asp:ListItem>
+                                    <asp:ListItem>Mandaluyong</asp:ListItem>
+                                    <asp:ListItem>Manila</asp:ListItem>
+                                    <asp:ListItem>Marikina</asp:ListItem>
+                                    <asp:ListItem>Muntinlupa</asp:ListItem>
+                                    <asp:ListItem>Navotas</asp:ListItem>
+                                    <asp:ListItem>Parañaque</asp:ListItem>
+                                    <asp:ListItem>Pasay</asp:ListItem>
+                                    <asp:ListItem>Pasig</asp:ListItem>
+                                    <asp:ListItem>Quezon City</asp:ListItem>
+                                    <asp:ListItem>San Juan</asp:ListItem>
+                                    <asp:ListItem>Taguig</asp:ListItem>
+                                    <asp:ListItem>Valenzuela</asp:ListItem>
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
