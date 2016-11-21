@@ -107,6 +107,7 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Student.aspx" />
     <Content Include="StudentData.xml" />
+    <Content Include="StudentListView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentListView.aspx.cs">
+      <DependentUpon>StudentListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentListView.aspx.designer.cs">
+      <DependentUpon>StudentListView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
