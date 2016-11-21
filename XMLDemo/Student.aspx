@@ -17,75 +17,67 @@
         <div>
             <div class="well">
                 <h3>XML Database Demo</h3>
-                <table class="table table-responsive">
-                    <tr>
-                        <th>ID No:</th>
-                        <td>
-                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtID" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>First Name:</th>
-                        <td>
-                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtFirstName" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Last Name:</th>
-                        <td>
-                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtLastName" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>City:</th>
-                        <td>
-                            <asp:DropDownList runat="server" CssClass="form-control" ID="_drpdwnlstCity">
-                                    <asp:ListItem>Caloocan</asp:ListItem>
-                                    <asp:ListItem>Las Piñas</asp:ListItem>
-                                    <asp:ListItem>Makati</asp:ListItem>
-                                    <asp:ListItem>Malabon</asp:ListItem>
-                                    <asp:ListItem>Mandaluyong</asp:ListItem>
-                                    <asp:ListItem>Manila</asp:ListItem>
-                                    <asp:ListItem>Marikina</asp:ListItem>
-                                    <asp:ListItem>Muntinlupa</asp:ListItem>
-                                    <asp:ListItem>Navotas</asp:ListItem>
-                                    <asp:ListItem>Parañaque</asp:ListItem>
-                                    <asp:ListItem>Pasay</asp:ListItem>
-                                    <asp:ListItem>Pasig</asp:ListItem>
-                                    <asp:ListItem>Quezon City</asp:ListItem>
-                                    <asp:ListItem>San Juan</asp:ListItem>
-                                    <asp:ListItem>Taguig</asp:ListItem>
-                                    <asp:ListItem>Valenzuela</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Gender:</th>
-                        <td>
-                            <asp:RadioButtonList runat="server" CssClass="radio radio-info" ID="_rdbtnlstGender" >
-                                <asp:ListItem>Male</asp:ListItem>
-                                <asp:ListItem>Female</asp:ListItem>
-                            </asp:RadioButtonList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Postal code:</th>
-                        <td>
-                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtPostalCode" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Mobile No:</th>
-                        <td>
-                            <asp:TextBox runat="server"  CssClass="form-control" ID="_txtMobileNo"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Insert" ID="_btnInsert" OnClick="_btnInsert_Click" />
-                        </td>
-                    </tr>
-                </table>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <label>ID No:</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="_txtID" />
+                                </div>
+                                <div class="col-sm-5">
+                                    <label>First Name:</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="_txtFirstName" />
+                                </div>
+                                <div class="col-sm-5">
+                                    <label>Last Name:</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="_txtLastName" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>City:</label>
+                                    <asp:DropDownList runat="server" CssClass="form-control" ID="_drpdwnlstCity">
+                                        <asp:ListItem>Caloocan</asp:ListItem>
+                                        <asp:ListItem>Las Piñas</asp:ListItem>
+                                        <asp:ListItem>Makati</asp:ListItem>
+                                        <asp:ListItem>Malabon</asp:ListItem>
+                                        <asp:ListItem>Mandaluyong</asp:ListItem>
+                                        <asp:ListItem>Manila</asp:ListItem>
+                                        <asp:ListItem>Marikina</asp:ListItem>
+                                        <asp:ListItem>Muntinlupa</asp:ListItem>
+                                        <asp:ListItem>Navotas</asp:ListItem>
+                                        <asp:ListItem>Parañaque</asp:ListItem>
+                                        <asp:ListItem>Pasay</asp:ListItem>
+                                        <asp:ListItem>Pasig</asp:ListItem>
+                                        <asp:ListItem>Quezon City</asp:ListItem>
+                                        <asp:ListItem>San Juan</asp:ListItem>
+                                        <asp:ListItem>Taguig</asp:ListItem>
+                                        <asp:ListItem>Valenzuela</asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Gender:</label>
+                                    <asp:RadioButtonList runat="server" CssClass="radio radio-info" ID="_rdbtnlstGender" RepeatDirection="Horizontal" Width="450px">
+                                        <asp:ListItem>Male</asp:ListItem>
+                                        <asp:ListItem>Female</asp:ListItem>
+                                    </asp:RadioButtonList>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Postal Code:</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="_txtPostalCode" />
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Mobile No.:</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="_txtMobileNo" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Insert" ID="_btnInsert" OnClick="_btnInsert_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br />
                 <asp:GridView runat="server" ID="_grdvwStudent" GridLines="None" CssClass="table table-responsive table-hover" AutoGenerateColumns="False" AllowPaging="True" AutoGenerateDeleteButton="True" AutoGenerateEditButton="True" OnRowEditing="_grdvwStudent_RowEditing" PageSize="5" OnRowCancelingEdit="_grdvwStudent_RowCancelingEdit" OnRowUpdating="_grdvwStudent_RowUpdating" OnRowDeleting="_grdvwStudent_RowDeleting" AllowSorting="True">
                     <Columns>
