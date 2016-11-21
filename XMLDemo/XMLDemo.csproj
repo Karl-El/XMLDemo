@@ -76,6 +76,9 @@
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="StudentData.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,6 +106,7 @@
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Student.aspx" />
+    <Content Include="StudentData.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
