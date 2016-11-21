@@ -46,7 +46,7 @@
             </asp:ListView>
             <asp:XmlDataSource runat="server" ID="_xmldsStudent" DataFile="~/StudentData.xml"></asp:XmlDataSource>
         </div>
-        <div class="row">
+        <div class="row col-xs-12">
             <asp:DataPager ID="DataPager1" runat="server" PageSize="5" PagedControlID="_lstvwStudent">
                 <Fields>
                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="True" ButtonCssClass="btn btn-primary btn-sm" />
@@ -54,7 +54,6 @@
                     <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="True" ShowPreviousPageButton="False" ButtonCssClass="btn btn-primary btn-sm" />
                 </Fields>
             </asp:DataPager>
-        </div>
         </div>
     </form>
 </body>
