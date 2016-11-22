@@ -5,7 +5,7 @@
     <firstname>Carl</firstname>
     <lastname>Cruz</lastname>
     <city>Taguig</city>
-    <gender>Male</gender>
+    <gender>Female</gender>
     <postalcode>1106</postalcode>
     <mobileno>09169118616</mobileno>
   </student>
@@ -13,9 +13,9 @@
     <id>2</id>
     <firstname>Blitz</firstname>
     <lastname>Crank</lastname>
-    <city>Quezon City</city>
+    <city>Caloocan</city>
     <gender>Male</gender>
-    <postalcode>1106</postalcode>
+    <postalcode>1125</postalcode>
     <mobileno>123-554-4444</mobileno>
   </student>
   <student>

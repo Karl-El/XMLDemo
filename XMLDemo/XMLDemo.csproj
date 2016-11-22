@@ -108,6 +108,7 @@
     <Content Include="Student.aspx" />
     <Content Include="StudentData.xml" />
     <Content Include="StudentListView.aspx" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
