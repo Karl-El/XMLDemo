@@ -72,6 +72,7 @@
                                     <asp:TextBox runat="server" CssClass="form-control" ID="_txtMobileNo" />
                                 </div>
                             </div>
+                            <hr />
                             <div class="row">
                                 <asp:Button runat="server" CssClass="btn btn-primary" Text="Insert" ID="_btnInsert" OnClick="_btnInsert_Click" />
                             </div>
