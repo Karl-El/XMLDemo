@@ -119,6 +119,7 @@
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentData.designer.cs" />
     <Compile Include="StudentListView.aspx.cs">
       <DependentUpon>StudentListView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
